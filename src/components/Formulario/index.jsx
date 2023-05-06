@@ -9,22 +9,23 @@ const Formulario = () => {
   const calculaImc = () => {
 
     let imc = (peso / (altura * altura));
+    const imcFixed = imc.toFixed(2);
 
     if (imc < 18.5 ) {
       return (
-        <p>Abaixo do peso normal, seu imc é: <b>{imc.toFixed(2)}</b></p>
+        <p>Abaixo do peso normal, seu imc é: <b>{imcFixed}</b></p>
       )
     } else if ( imc >= 19.5 && imc < 26.4 ) {
       return (
-        <p>Peso normal, seu imc é: <b>{imc.toFixed(2)}</b></p>
+        <p>Peso normal, seu imc é: <b>{imcFixed}</b></p>
       )
     } else if (imc >= 26.4 &&  imc < 31) {
       return (
-        <p>Excesso de peso, seu imc é: <b>{imc.toFixed(2)}</b></p>
+        <p>Excesso de peso, seu imc é: <b>{imcFixed}</b></p>
       )
     } else if (imc >= 31) {
       return (
-        <p>Você está obeso, seu imc é: <b>{imc.toFixed(2)}</b></p>
+        <p>Você está obeso, seu imc é: <b>{imcFixed}</b></p>
       )
     }
     console.log(imc)
